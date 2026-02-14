@@ -1,3 +1,22 @@
-<h1>${message}</h1>
-<h1>${message}</h1>
-<h1>${nome}</h1>
+<header class="hero">
+  <div class="hero-overlay">
+    <h1 class="title">Home</h1>
+  </div>
+</header>
+
+<nav class="topbar">
+  <div class="left">
+    <a if.bind="auth.isLoggedIn" load="projects">Progetti</a>
+    <a if.bind="auth.isLoggedIn" load="companies">Aziende</a>
+    <a if.bind="auth.isLoggedIn" load="users">Utenti</a>
+  </div>
+
+  <div class="right">
+    <button if.bind="!auth.isLoggedIn" click.trigger="openLogin()">Login</button>
+    <button if.bind="auth.isLoggedIn" click.trigger="logout()">Logout</button>
+  </div>
+</nav>
+
+<main class="content">
+  <au-viewport></au-viewport>
+</main>

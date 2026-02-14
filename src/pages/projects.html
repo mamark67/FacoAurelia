@@ -1,0 +1,12 @@
+<section class="page">
+  <h2>Progetti</h2>
+
+  <div if.bind="loading">Caricamento...</div>
+  <div if.bind="error">${error}</div>
+
+  <ul if.bind="!loading && !error">
+    <li repeat.for="p of items">
+      <strong>${p.name}</strong> <span>(${p.id})</span>
+    </li>
+  </ul>
+</section>
