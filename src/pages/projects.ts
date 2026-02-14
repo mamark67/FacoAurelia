@@ -1,4 +1,3 @@
-import { injectable } from 'aurelia';
 import { ApiClient } from '../services/api-client';
 
 type Project = {
@@ -6,7 +5,7 @@ type Project = {
   name: string;
 };
 
-@injectable()
+ 
 export class Projects {
   public items: Project[] = [];
   public loading = false;

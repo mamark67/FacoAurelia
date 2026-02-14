@@ -1,9 +1,9 @@
 import { DialogService } from '@aurelia/dialog';
-import { injectable } from 'aurelia';
 import { AuthService } from './services/auth-service';
 import { LoginDialog } from './components/login-dialog';
+import { Projects } from './pages/projects';
 
-@injectable()
+ 
 export class MyApp {
 
   static routes = [

@@ -1,7 +1,6 @@
 import { DialogController } from '@aurelia/dialog';
-import { injectable } from 'aurelia';
-
-@injectable()
+import { resolve } from '@aurelia/kernel';
+ 
 export class LoginDialog {
   public username = '';
   public password = '';
