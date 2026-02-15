@@ -1,8 +1,8 @@
 import { Aurelia } from 'aurelia';
-import { DialogConfiguration } from '@aurelia/dialog';
+import { DialogConfigurationStandard } from '@aurelia/dialog';
 import { MyApp } from './my-app';
 
 Aurelia
-  .register(DialogConfiguration) // dialog plugin
+  .register(DialogConfigurationStandard) // dialog plugin
   .app(MyApp)
   .start();

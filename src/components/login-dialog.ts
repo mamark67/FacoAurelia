@@ -1,10 +1,12 @@
-import { DialogController } from '@aurelia/dialog';
 
+import { resolve } from 'aurelia';
+import { IDialogController } from '@aurelia/dialog';
 export class LoginDialog {
   username = '';
   password = '';
-
-  constructor(private controller: DialogController) {}
+  
+  private readonly controller = resolve(IDialogController);
+  
 
   cancel() {
     this.controller.cancel();
