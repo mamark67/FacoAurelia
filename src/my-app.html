@@ -1,22 +1,24 @@
-<header class="hero">
-  <div class="hero-overlay">
-    <h1 class="title">Home</h1>
-  </div>
-</header>
+<template>
+  <header class="hero">
+    <div class="hero-overlay">
+      <h1 class="title">Home</h1>
+    </div>
+  </header>
 
-<nav class="topbar">
-  <div class="left">
-    <a if.bind="auth.isLoggedIn" load="projects">Progetti</a>
-    <a if.bind="auth.isLoggedIn" load="companies">Aziende</a>
-    <a if.bind="auth.isLoggedIn" load="users">Utenti</a>
-  </div>
+  <nav class="topnav">
+    <div class="left">
+      <a if.bind="auth.isLoggedIn" load="progetti">Progetti</a>
+      <a if.bind="auth.isLoggedIn" load="aziende">Aziende</a>
+      <a if.bind="auth.isLoggedIn" load="utenti">Utenti</a>
+    </div>
 
-  <div class="right">
-    <button if.bind="!auth.isLoggedIn" click.trigger="openLogin()">Login</button>
-    <button if.bind="auth.isLoggedIn" click.trigger="logout()">Logout</button>
-  </div>
-</nav>
+    <div class="right">
+      <a if.bind="!auth.isLoggedIn" click.trigger="openLogin()">Login</a>
+      <a if.bind="auth.isLoggedIn" click.trigger="doLogout()">Logout</a>
+    </div>
+  </nav>
 
-<main class="content">
-  <au-viewport></au-viewport>
-</main>
+  <main class="page">
+    <au-viewport></au-viewport>
+  </main>
+</template>

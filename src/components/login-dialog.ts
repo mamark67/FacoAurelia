@@ -1,10 +1,8 @@
 import { DialogController } from '@aurelia/dialog';
-import { resolve } from '@aurelia/kernel';
- 
+
 export class LoginDialog {
-  public username = '';
-  public password = '';
-  public error: string | null = null;
+  username = '';
+  password = '';
 
   constructor(private controller: DialogController) {}
 
@@ -13,7 +11,9 @@ export class LoginDialog {
   }
 
   ok() {
-    // ritorna i valori al chiamante
-    this.controller.ok({ username: this.username, password: this.password });
+    this.controller.ok({
+      username: this.username,
+      password: this.password
+    });
   }
 }

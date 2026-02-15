@@ -1,20 +1,9 @@
-<div class="login-dialog">
-  <h3>Login</h3>
+<template>
+  <h2>Login</h2>
 
-  <label>
-    User
-    <input value.bind="username" />
-  </label>
+  <input placeholder="User" value.bind="username">
+  <input type="password" placeholder="Password" value.bind="password">
 
-  <label>
-    Password
-    <input type="password" value.bind="password" />
-  </label>
-
-  <div class="error" if.bind="error">${error}</div>
-
-  <div class="actions">
-    <button click.trigger="ok()">OK</button>
-    <button click.trigger="cancel()">Annulla</button>
-  </div>
-</div>
+  <button click.trigger="cancel()">Annulla</button>
+  <button click.trigger="ok()">OK</button>
+</template>
