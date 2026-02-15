@@ -5,18 +5,19 @@
     </div>
   </header>
 
-  <nav class="topnav">
-    <div class="left">
-      <a if.bind="auth.isLoggedIn" load="progetti">Progetti</a>
-      <a if.bind="auth.isLoggedIn" load="aziende">Aziende</a>
-      <a if.bind="auth.isLoggedIn" load="utenti">Utenti</a>
-    </div>
+<nav class="topnav">
+  <div class="left">
+    <a load="home">Home</a>
+    <a if.bind="auth.isLoggedIn" load="progetti">Progetti</a>
+    <a if.bind="auth.isLoggedIn" load="aziende">Aziende</a>
+    <a if.bind="auth.isLoggedIn" load="utenti">Utenti</a>
+  </div>
 
-    <div class="right">
-      <a if.bind="!auth.isLoggedIn" click.trigger="openLogin()">Login</a>
-      <a if.bind="auth.isLoggedIn" click.trigger="doLogout()">Logout</a>
-    </div>
-  </nav>
+  <div class="right">
+    <a if.bind="!auth.isLoggedIn" click.trigger="openLogin()">Login</a>
+    <a if.bind="auth.isLoggedIn" click.trigger="doLogout()">Logout</a>
+  </div>
+</nav>
 
   <main class="page">
     <au-viewport></au-viewport>

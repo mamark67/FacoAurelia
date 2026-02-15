@@ -1,12 +1,3 @@
 <template>
-  <h2>Progetti</h2>
-
-  <p if.bind="loading">Caricamento...</p>
-  <p if.bind="error">${error}</p>
-
-  <ul if.bind="!loading && !error">
-    <li repeat.for="p of items">
-      ${p.nome} (id: ${p.id})
-    </li>
-  </ul>
+  <h2>Pagina Progetti</h2>
 </template>

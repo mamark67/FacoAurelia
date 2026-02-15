@@ -40,4 +40,11 @@ export class AuthService {
     this._token = null;
     localStorage.removeItem('token');
   }
+async apiLogin(username: string, password: string): Promise<boolean> {
+    await new Promise(r => setTimeout(r, 300)); // finta latenza
+    this._token = 'fake-jwt-token';
+    localStorage.setItem('token', this._token); 
+    return true;
+  }
+  
 }

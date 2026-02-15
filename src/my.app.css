@@ -1,32 +1,36 @@
-.hero {
-  height: 140px;               /* header “non troppo alto” */
-  background-image: url('/assets/header.jpg');
-  background-size: cover;
-  background-position: center;
+.topnav{
+  display:flex;
+  align-items:center;
+  flex-wrap:nowrap;        /* NON andare a capo */
+  gap:16px;
+  padding:10px 16px;
+  border-bottom:1px solid #ddd;
 }
 
-.hero-overlay {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-  background: rgba(0,0,0,0.35);
+/* sinistra: prende lo spazio disponibile */
+.topnav .left{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  flex:1 1 auto;
+  min-width:0;
+  white-space:nowrap;      /* link in una riga */
 }
 
-.title { color: #fff; margin: 0; }
-
-.topnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 16px;
-  border-bottom: 1px solid #ddd;
+/* destra: sempre attaccata a destra, non va a capo */
+.topnav .right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-left:auto;        /* spinge tutto a destra */
+  flex:0 0 auto;
+  white-space:nowrap;
 }
 
-.topnav .left, .topnav .right {
-  display: flex;
-  gap: 14px;
+/* link */
+.topnav a{
+  display:inline-flex;     /* evita comportamenti strani */
+  text-decoration:none;
+  cursor:pointer;
+  padding:6px 8px;
 }
-
-.topnav a { cursor: pointer; text-decoration: none; }
-.page { padding: 16px; }
